@@ -6,9 +6,19 @@
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
+    "@types/ramda": "^0.27.32",
+    "@types/styletron-engine-atomic": "^1.1.0",
+    "@types/styletron-react": "^5.0.2",
+    "@types/styletron-standard": "^2.0.1",
+    "baseui": "^9.104.0",
+    "ramda": "^0.27.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.0",
+    "skynet-js": "^2.4.0",
+    "styletron-engine-atomic": "^1.4.6",
+    "styletron-react": "^5.2.7",
+    "typescript": "^4.0.5",
     "web-vitals": "^0.2.4"
   },
   "scripts": {
@@ -34,5 +44,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@types/react": "^16.9.56",
+    "eslint-plugin-baseui": "^9.104.0"
   }
 }

@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import * as R from 'ramda';
+
+import { BaseProvider, LightTheme, styled } from 'baseui';
+import { SkynetClient, keyPairFromSeed } from 'skynet-js';
+import { getAtPath, pushItemToField } from './services/skydb-service';
+
+import Homepage from './pages/Homepage';
+import { StatefulInput } from 'baseui/input';
+import { Client as Styletron } from 'styletron-engine-atomic';
+import { Provider as StyletronProvider } from 'styletron-react';
+import { useEffect } from 'react';
+
+const engine = new Styletron();
+const Centered = styled('div', {
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  height: '100%',
+});
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StyletronProvider value={engine}>
+      <BaseProvider theme={LightTheme}>
+        <Homepage />
+      </BaseProvider>
+    </StyletronProvider>
   );
 }
 
